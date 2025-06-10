@@ -13,3 +13,13 @@ typing_extensions==4.14.0
 uvicorn==0.34.3
 python-dotenv==1.0.1
 pydantic-settings==2.0.0
+# Authentication dependencies
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+# Database dependencies
+sqlalchemy==2.0.27
+psycopg2-binary==2.9.9
+alembic==1.13.1
+# Email dependencies
+fastapi-mail==1.4.1

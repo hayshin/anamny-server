@@ -1,0 +1,31 @@
+[project]
+name = "server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12,<4.0"
+dependencies = [
+    "alembic==1.13.1",
+    "annotated-types==0.7.0",
+    "anyio==4.9.0",
+    "click==8.2.1",
+    "dotenv>=0.9.9",
+    "fastapi==0.115.12",
+    "fastapi-mail==1.4.1",
+    "h11==0.16.0",
+    "idna==3.10",
+    "passlib[bcrypt]==1.7.4",
+    "pydantic==2.11.5",
+    "pydantic-core==2.33.2",
+    "pydantic-settings==2.0.0",
+    "python-dotenv==1.0.1",
+    "python-jose[cryptography]==3.3.0",
+    "python-multipart==0.0.6",
+    "sniffio==1.3.1",
+    "sqlalchemy==2.0.27",
+    "starlette==0.46.2",
+    "typing-extensions==4.14.0",
+    "typing-inspection==0.4.1",
+    "uvicorn==0.34.3",
+    "psycopg2-binary (>=2.9.10,<3.0.0)",
+]
