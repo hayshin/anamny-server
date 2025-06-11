@@ -12,6 +12,7 @@ Base = declarative_base()
 
 # Import models so they are registered with Base.metadata
 from .auth.models import User, PasswordResetToken  # noqa
+from .chat.models import ChatSession, ChatMessage  # noqa
 
 
 # Dependency to get DB session

@@ -19,6 +19,10 @@ class Settings(BaseSettings):
     algorithm: str = "HS256"
     access_token_expire_minutes: int = 30
     
+    # AI/Chat
+    gemini_api_key: str = ""
+    google_api_key: str = ""
+    
     # Email (for password reset)
     mail_username: str = ""
     mail_password: str = ""

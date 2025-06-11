@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .database import engine, Base
 from .auth.api import router as auth_router
+from .chat.api import router as chat_router
 from .celery import celery_app
 
 # Create database tables
@@ -37,6 +38,7 @@ def health_check():
 
 # Include routers
 app.include_router(auth_router)
+app.include_router(chat_router)
 
 # Add a test endpoint to trigger Celery tasks
 @app.post("/test-celery")

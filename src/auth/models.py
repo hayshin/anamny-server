@@ -1,4 +1,5 @@
 from sqlalchemy import Column, Integer, String, DateTime, Boolean
+from sqlalchemy.orm import relationship
 from sqlalchemy.sql import func
 
 from ..database import Base
@@ -21,6 +22,9 @@ class User(Base):
     age = Column(Integer, nullable=True)
     gender = Column(String, nullable=True)  # 'male', 'female', 'other'
     blood_type = Column(String, nullable=True)  # 'A+', 'A-', 'B+', etc.
+
+    # Relationships
+    chat_sessions = relationship("ChatSession", back_populates="user")
 
 
 class PasswordResetToken(Base):
