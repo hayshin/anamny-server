@@ -7,6 +7,7 @@ from sqlalchemy import pool
 
 from alembic import context
 
+from src.config import settings
 # Add the src directory to Python path
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
@@ -18,6 +19,10 @@ from src.auth.models import User, PasswordResetToken  # Import models to registe
 # access to the values within the .ini file in use.
 config = context.config
 
+config.set_main_option(
+    "sqlalchemy.url", 
+    settings.database_url or "postgresql://anamny_user:anamny_password@localhost:5432/anamny_db"
+)
 # Interpret the config file for Python logging.
 # This line sets up loggers basically.
 if config.config_file_name is not None:
